@@ -1,0 +1,24 @@
+<h1 align="center" style="font-size:60px">Chrystal Shop</h1>
+<img width = "100%"  src ="./assets/images/fon.png"/>
+
+<form style = "margin-left: 25%; margin-right:25%; border: solid 3px" #loginForm = "ngForm" (ngSubmit) = "onSubmit(loginForm)" novalidate>
+  <h2 align="center">Sign in to my account</h2>
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="margin-left: 3%; margin-right:3%">Email address</label>
+    <input type="email" name= 'email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel required email #email= "ngModel"/>
+    <small *ngIf = "!email?.valid && (email?.dirty || email?.touched)" style = "color: red"> Invalid email</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="margin-left: 3%; margin-right:3%">Password</label>
+    <small> ( 8 characters, ^[a-z, A-Z]+$ )</small>
+    <input type="password" name= 'password' class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required minlength = "8" #password = "ngModel"/>
+  </div>
+  <small *ngIf = "!password?.valid && (password?.dirty || password?.touched)" style = "color: red"> Invalid password</small>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" style="margin-left: 1%; margin-right:1%">
+    <label class="form-check-label"  for="exampleCheck1" style="margin-left: 3%; margin-right:3%">Check me out</label>
+  </div>
+  <button type="submit" [disabled]= "!loginForm.valid" class="btn btn-primary" style="margin: 3%">Submit</button>
+</form>
+
+<!--ne rabotaet proverka, red color-->

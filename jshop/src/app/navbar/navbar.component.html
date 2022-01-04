@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">    
+    <a class="navbar-brand" routerLink="/home" style= "color: white"><img width="30px" height = "30px" src="./assets/images/diam.png" /></a>
+    <a class="navbar-brand" routerLink="/home" style= "color: white">Chrystal Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="activeStyle">Home</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLink="/products" routerLinkActive="activeStyle">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart" routerLinkActive="activeStyle">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contacts" routerLinkActive="activeStyle">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <h6 style="margin-left: 1200%"><a class="nav-link" routerLink="/login" routerLinkActive="activeStyle">Logout</a></h6>
+        </li> 
+      </ul>
+      <div><p routerLink="/user"><img width="35px" height = "35px" src={{user.avatar}}></p></div>
+    </div>
+  </div>
+</nav>

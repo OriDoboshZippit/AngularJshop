@@ -1,0 +1,14 @@
+
+<div id = "card" class = "row">
+    <div *ngFor = "let product of Products" class="card border-light mb-3" style="max-width: 17rem">
+        <ng-container *ngIf = "product.category == selectedCategory1"> 
+            <div class="card-header"><h6>{{product.name}}</h6></div>
+            <div class="card-body">
+                <p><img width="200px" height = "200px"  [src]='product.img'/></p>
+                <h4 class="card-title">{{product.price}} ₪</h4>
+                <p class = "hoover"style="cursor:pointer;"><a (click)="AddtoCart(product)"><img width="18px" height = "18px" style="cursor:pointer" src="./assets/images/cart.png"/>Add to cart</a></p>
+                <p style ="font-size:12px" class="card-text">{{product.description}}</p>
+            </div>
+         </ng-container> 
+    </div>
+</div>

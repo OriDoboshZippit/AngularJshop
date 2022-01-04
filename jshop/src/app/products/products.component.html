@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class = "center">
+    <app-sidebar #child></app-sidebar>
+    <div style="margin-left:3%">
+        <div  class = "row" >
+            <app-show-products [selectedCategory1]="child.selectedCategory"></app-show-products>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,9 @@
+#card{
+    margin-left: 1%;
+}
+.hoover:hover{
+    text-shadow: 3px 3px 3px;
+}
+.hoover:active{
+    text-shadow: 3px 3px 3px red;
+}

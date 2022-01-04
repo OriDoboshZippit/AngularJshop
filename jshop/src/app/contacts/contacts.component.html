@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<h1 align = "center">{{welcome}}</h1>
+<p style = "margin-left: 50%">
+<div class = "row " style="margin-left:18%" >
+    <div class="card border-light mb-3" style="max-width: 20rem;">
+        <p align = "center"><img width="40px" height = "40px"  src="./assets/images/tel.png" /></p>
+        <div class="card-header"><h2>Speak Live with a Jewelry Expert</h2></div>
+        <div class="card-body">
+        <h6 class="card-title">Talk directly with an expert via your smart phone or computer audio with any jewelry questions or get guidance as you get started. We’re here for you.</h6>
+        <p class="card-text"><b>Hours available:</b><br>
+            Monday–Friday 9am–10pm ET
+            Saturday–Sunday 12pm–9pm ET</p>
+        </div>
+    </div>
+    <div class="card border-light mb-3" style="max-width: 20rem;">
+        <p align = "center"><img width="40px" height = "40px"  src="./assets/images/chat.png" /></p>
+        <div class="card-header"><h2>Chat with Customer Care</h2></div>
+        <div class="card-body">
+        <h6 class="card-title">Type to chat with a Customer Care agent about the status of your order, any issues placing your online order, current promotions and more.</h6>
+        <p class="card-text"><b>Hours available:</b><br>
+            Monday–Friday 9am–10pm ET
+            Saturday–Sunday 12pm–9pm ET</p>
+        </div>
+    </div>
+        <div class="card border-light mb-3" style="max-width: 20rem;">
+        <p align = "center"><img width="40px" height = "40px"  src="./assets/images/cal.png" /></p>
+        <div class="card-header"><h2>Book An Appointment</h2></div>
+        <div class="card-body">
+        <h6 class="card-title">Your time is valuable and we don’t want to keep you waiting. Book an appointment for a specific date and time with the Zales store nearest you. Schedule a virtual appointment from the comfort of your home or office, or schedule a traditional one-on-one consultation in-store. You can even schedule an in-store repair and care consultation. We look forward to serving you!</h6>
+        <p class="card-text"><b>Hours available:</b><br>
+            Monday–Friday 9am–10pm ET
+            Saturday–Sunday 12pm–9pm ET</p>
+        </div>
+    </div>
+</div>
+<h3 style="margin-left:5%">{{where}}</h3>
+<p style="font-size:18px; margin-left:5%">Check the status of your online order or cancel your order <a  href = "https://www.17track.net/en" >HERE</a> (note: Orders can only be cancelled up to one hour after placed)</p>
+<h3 style="margin-left:5%">{{callus}}</h3>
+<p style="font-size:13px; margin-left:5%">Monday-Friday 9am-10pm ET<br>Saturday 12pm-10pm ET<br>Sunday 12pm-9pm ET</p>
+<div style="margin-left:30%">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.4067022698882!2d35.28054081516046!3d32.913851380930936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c33e41201da93%3A0xee7b4a64461d4ece!2z15TXnteb15zXnNeUINeU15jXm9eg15XXnNeV15LXmdeqINec15TXoNeT16HXkNeZ150g15DXldeo15gg15HXqNeQ15XXk9eUINeb16jXnteZ15DXnA!5e0!3m2!1sen!2sil!4v1622544629797!5m2!1sen!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<table class="table table-hover" style="width: 45%; margin-left: 27%;">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active" *ngFor = "let user of usersList">
+      <td>{{user.ID}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.tel}}</td>
+      <td><img src={{user.avatar}} height="250px" width="250px"/></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<app-footer></app-footer>

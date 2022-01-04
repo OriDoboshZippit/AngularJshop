@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+<h5 style = "margin-left: 5%">Welcome, {{user.name}}! </h5>
+<img width = "100%" src =" https://pusseta.com.ua/upload/stblog/1/40/50/4050large.jpg"/>
+
+<h1 font-family="Arial" align="center">Our best products</h1>
+<div class = "row">
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[1].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[1].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[1].img" /></p>
+      <h2 class="card-text">{{Products[1].price}} ₪</h2>
+      <p class="card-text">{{Products[1].description}}</p>
+      </div>
+    </div>
+    
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[5].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[5].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[5].img" /></p>
+      <h2 class="card-text">{{Products[5].price}} ₪</h2>
+      <p class="card-text">{{Products[5].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[12].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[12].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[12].img" /></p>
+      <h2 class="card-text">{{Products[12].price}} ₪</h2>
+      <p class="card-text">{{Products[12].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[23].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[23].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[23].img" /></p>
+      <h2 class="card-text">{{Products[23].price}} ₪</h2>
+      <p class="card-text">{{Products[23].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[26].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[26].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[26].img" /></p>
+      <h2 class="card-text">{{Products[26].price}}  ₪ </h2>
+      <p class="card-text">{{Products[26].description}}</p>
+      </div>
+    </div>
+  
+</div>
+
+<h1 font-family="Arial" align="center">Our Sales</h1>
+<div class = "row">
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[3].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[3].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[3].img" /></p>
+      <h4 class="card-text"><del>{{Products[3].price}} ₪</del></h4>
+      <h3 style = "color: red"class="card-text">Discount 20% {{(Products[3].price*0.8).toFixed(2)}} ₪</h3>
+      <p class="card-text">{{Products[3].description}}</p>
+      </div>
+    </div>
+    
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[4].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[4].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[4].img" /></p>
+      <h4 class="card-text"><del>{{Products[4].price}} ₪ </del></h4>
+      <h3 style = "color: red"class="card-text">Discount 20% {{(Products[4].price*0.8).toFixed(2)}} ₪</h3>
+      <p class="card-text">{{Products[4].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[12].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[12].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[12].img" /></p>
+      <h4 class="card-text"><del>{{Products[12].price}} ₪</del></h4>
+      <h3 style = "color: red"class="card-text">Discount 20% {{(Products[12].price*0.8).toFixed(2)}} ₪</h3>
+      <p class="card-text">{{Products[12].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[27].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[27].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[27].img" /></p>
+      <h4 class="card-text"><del>{{Products[27].price}} ₪</del></h4>
+      <h3 style = "color: red"class="card-text">Discount 20% {{(Products[27].price*0.8).toFixed(2)}} ₪</h3>
+      <p class="card-text">{{Products[27].description}}</p>
+      </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="max-width: 19rem;">
+      <div class="card-header"><h6>{{Products[29].id}}</h6></div>
+      <div class="card-body">
+      <h4 class="card-title">{{Products[29].name}}</h4>
+      <p><img width="200px" height = "200px"  [src]="Products[29].img" /></p>
+      <h4 class="card-text"><del>{{Products[29].price}}  ₪ </del></h4>
+      <h3 style = "color: red"class="card-text">Discount 20% {{(Products[29].price*0.8).toFixed(2)}} ₪</h3>
+      <p class="card-text">{{Products[29].description}}</p>
+      </div>
+    </div>
+  
+</div>
+<app-footer></app-footer>
