@@ -10,9 +10,13 @@ import { UsersService } from '../users.service';
 export class LoginComponent implements OnInit {
   users = [];
   constructor (private userService: UsersService, private router: Router){}
-
+  // usersJson : any;
   ngOnInit(): void {
+    
     this.users = this.userService.getUsers();
+    // this.usersJson = JSON.stringify(this.users);  
+    // console.log("With Stringify :" , this.usersJson);  
+      
   }
   user: any
   onSubmit(loginForm) {

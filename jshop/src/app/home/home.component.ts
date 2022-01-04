@@ -11,11 +11,15 @@ import {UsersService} from '../users.service';
 export class HomeComponent implements OnInit {
 
   constructor(private es: RingsService, private userService: UsersService) { }
-  
+  // productsJson : any;
   user: any
   ngOnInit(): void {
+    
     this.Products = this.es.getProducts()
     this.user = this.userService.savedUser
+    // this.productsJson = JSON.stringify(this.Products);  
+    // console.log("With Stringify :" , this.productsJson);  
+
   }
   
   
