@@ -1,6 +1,8 @@
+import { User } from './../users.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
+  
 
 @Component({
   selector: 'app-login',
@@ -8,19 +10,23 @@ import { UsersService } from '../users.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  users = [];
-  constructor (private userService: UsersService, private router: Router){}
-  // usersJson : any;
+  user = new User("","","","");
+  usersFromServer: User[];
+  constructor(private userService: UsersService, private router: Router){}
+
   ngOnInit(): void {
-    
-    this.users = this.userService.getUsers();
-    // this.usersJson = JSON.stringify(this.users);  
-    // console.log("With Stringify :" , this.usersJson);  
-      
+      this.getUsers();
   }
-  user: any
+
+  getUsers() {
+    this.userService.getUsers().subscribe((data) => {
+      console.log(data)
+      this.usersFromServer=data;
+    });
+  }
+
   onSubmit(loginForm) {
-    for (let user of this.users){
+    for (let user of this.usersFromServer){
       if (user.email == loginForm.value.email && user.password == loginForm.value.password)
       {
         console.log('Valid user');
