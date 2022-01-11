@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class UsersService {
   savedUser = new User('','','','');
-  usersDataJson=[]
+  usersDataJson=[];
 
   baseURL: string = 'http://localhost:3000/';
   headers = { 'content-type':'application/json' };

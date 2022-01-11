@@ -7,17 +7,37 @@
                 <br>
             
 
-                <div class="form-content">
+                    <!-- <div class="form-group">
+                        <label>Name: </label>
+                        <input [(ngModel)]="user.name" />
+                        <br />
+                        <br />
+                        <label>Email: </label>
+                        <input  [(ngModel)]="user.email" />
+                        <br />
+                        <br />
+                        <label>Password: </label>
+                        <input  [(ngModel)]="user.password" />
+                        <br />
+                        <br />
+                        <label>Avatar: </label>
+                        <input  [(ngModel)]="user.avatar" />
+                        <br />
+                        <br />
+                       
+                      </div> -->
+
+        
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" style="margin-left: 3%; margin-right:3%">Your name</label>
-                                <input type="text" name= 'nameOfNewUser' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" ngModel required email #email= "ngModel"/>
+                                <input [(ngModel)]="user.name" type="text" name= 'nameOfNewUser' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" ngModel required email #email= "ngModel"/>
                                 <small *ngIf = "!email?.valid && (email?.dirty || email?.touched)" style = "color: red"> Invalid name</small>
                               </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail2" style="margin-left: 3%; margin-right:3%">Email address</label>
-                                <input type="email" name= 'email' class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" ngModel required email #email= "ngModel"/>
+                                <input [(ngModel)]="user.email" type="email" name= 'email' class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" ngModel required email #email= "ngModel"/>
                                 <small *ngIf = "!email?.valid && (email?.dirty || email?.touched)" style = "color: red"> Invalid email</small>
                               </div>
                         </div>
@@ -25,7 +45,7 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1" style="margin-left: 3%; margin-right:3%">Password</label>
                                 <small> ( 8 characters, ^[a-z, A-Z]+$ )</small>
-                                <input type="password" name= 'password' class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required minlength = "8" #password = "ngModel"/>
+                                <input [(ngModel)]="user.password" type="password" name= 'password' class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required minlength = "8" #password = "ngModel"/>
                               </div>
                               <div class="form-group">
                                 <label for="exampleInputPassword2" style="margin-left: 3%; margin-right:3%">Confirm Password</label>
@@ -33,7 +53,7 @@
                                 <input type="password" name= 'password' class="form-control" id="exampleInputPassword2" placeholder="Confirmation of  Password" ngModel required minlength = "8" #password = "ngModel"/>
                               </div>
                         </div>
-                    </div>
+                    </div> 
                         <div class="note">
                     <h3 align="left" >Choose Picture of Your Profile</h3>
                 </div>
@@ -44,7 +64,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
     
         <!-- <button type="button" (click)= "onUpload()">Upload</button> -->
