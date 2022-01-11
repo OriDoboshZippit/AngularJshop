@@ -16,6 +16,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ShowProductsComponent } from './show-products/show-products.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SidebarComponent,
     ShowProductsComponent,
-    UserComponent
+    UserComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

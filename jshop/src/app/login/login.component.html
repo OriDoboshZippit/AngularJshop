@@ -14,14 +14,17 @@
     <input type="password" name= 'password' class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required minlength = "8" #password = "ngModel"/>
   </div>
   <small *ngIf = "!password?.valid && (password?.dirty || password?.touched)" style = "color: red"> Invalid password</small>
-  <div class="form-check">
+  <!-- <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" style="margin-left: 1%; margin-right:1%">
     <label class="form-check-label"  for="exampleCheck1" style="margin-left: 3%; margin-right:3%">Check me out</label>
-  </div>
+  </div> -->
   <div align = "center">
   <button type="submit" [disabled]= "!loginForm.valid" class="btn btn-primary" style="margin: 3%">Enter to Chrystal Shop</button>
-  <button type="submit" class="btn btn-secondary" style="margin: 3%" >Registration of new user</button>
+
+  <button type="button" (click)="newUser()" class="btn btn-secondary" style="margin: 3%" >Registration of new user</button>
+
 </div>
 </form>
+
 
 <!--ne rabotaet proverka, red color-->

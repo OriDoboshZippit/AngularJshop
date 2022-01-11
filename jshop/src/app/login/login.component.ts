@@ -24,7 +24,10 @@ export class LoginComponent implements OnInit {
       this.usersFromServer=data;
     });
   }
-
+  newUser (){
+    this.router.navigateByUrl('/reg');
+  }
+  
   onSubmit(loginForm) {
     for (let user of this.usersFromServer){
       if (user.email == loginForm.value.email && user.password == loginForm.value.password)

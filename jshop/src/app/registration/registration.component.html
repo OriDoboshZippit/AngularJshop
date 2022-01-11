@@ -1,0 +1,50 @@
+<h1 align="center" style="font-size:60px">Chrystal Shop</h1>
+<img width = "100%"  src ="./assets/images/fon.png"/>
+
+<div class="container register-form">
+            <div class="form">
+                <br>
+                <br>
+            
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" style="margin-left: 3%; margin-right:3%">Your name</label>
+                                <input type="text" name= 'nameOfNewUser' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" ngModel required email #email= "ngModel"/>
+                                <small *ngIf = "!email?.valid && (email?.dirty || email?.touched)" style = "color: red"> Invalid name</small>
+                              </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2" style="margin-left: 3%; margin-right:3%">Email address</label>
+                                <input type="email" name= 'email' class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" ngModel required email #email= "ngModel"/>
+                                <small *ngIf = "!email?.valid && (email?.dirty || email?.touched)" style = "color: red"> Invalid email</small>
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" style="margin-left: 3%; margin-right:3%">Password</label>
+                                <small> ( 8 characters, ^[a-z, A-Z]+$ )</small>
+                                <input type="password" name= 'password' class="form-control" id="exampleInputPassword1" placeholder="Password" ngModel required minlength = "8" #password = "ngModel"/>
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword2" style="margin-left: 3%; margin-right:3%">Confirm Password</label>
+                                <small> ( Put the same password that your write above )</small>
+                                <input type="password" name= 'password' class="form-control" id="exampleInputPassword2" placeholder="Confirmation of  Password" ngModel required minlength = "8" #password = "ngModel"/>
+                              </div>
+                        </div>
+                    </div>
+                        <div class="note">
+                    <h3 align="left" >Choose Picture of Your Profile</h3>
+                </div>
+                    <!-- <input type ="file" (change)= "onFileSelected($event)">  -->
+                    <div align = "center">
+                    <button (click)="sendRegisterNewUser()" type="button" class="btnSubmit" style="margin-right:15px">Register New User</button>
+                    <button (click)="backToMain()" type="button" class="btnSubmit" style="margin-left:15px">Back to Login Page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- <button type="button" (click)= "onUpload()">Upload</button> -->

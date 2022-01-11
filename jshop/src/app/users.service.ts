@@ -12,8 +12,8 @@ export class UsersService {
   baseURL: string = 'http://localhost:3000/';
   headers = { 'content-type':'application/json' };
   constructor(private http: HttpClient) {
-    // let usersJson=JSON.stringify(this.usersDataJson);
-    // console.log(usersJson);
+    let usersJson=JSON.stringify(this.usersDataJson);
+    console.log(usersJson);
   }
 
 
@@ -22,14 +22,13 @@ export class UsersService {
    
   }
 
-
+  sendRegisterNewUser (user: User): Observable<any> {
+    let body = JSON.stringify(user);
+    return this.http.post(this.baseURL + 'users', body, {
+    headers: this.headers,
+    });
+  }
   
-  // addUser(user: Product): Observable<any> {
-  //   let body = JSON.stringify(product);
-  //   return this.http.post(this.baseURL + 'products', body, {
-  //   headers: this.headers,
-  //   });
-  // }
 
   // updateProduct(product: Product): Observable<any> {
   //   let body = JSON.stringify(product);
@@ -45,18 +44,7 @@ export class UsersService {
 
 }
 
-// class User {
-//   name: string;
-//   email: string;
-//   password: string;
-//   avatar:string;
 
-//   constructor(name: string, email: string, password: string, avatar: string){
-//     this.name = name;
-//     this.email = email;
-//     this.password = password;
-//     this.avatar = avatar;
-//   }
 export class User {
   name: string;
   email: string;
